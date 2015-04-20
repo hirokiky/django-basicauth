@@ -1,0 +1,2 @@
+include LICENSE
+include *.txt *.ini *.cfg *.rst

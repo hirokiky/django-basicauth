@@ -1,0 +1,14 @@
+*.egg
+*.egg-info
+*.pyc
+*$py.class
+*~
+*.sqlite3
+*.sqlite3-journal
+.*.sw?
+.sw?
+.DS_Store
+.idea/
+.tox/
+dist/
+build/

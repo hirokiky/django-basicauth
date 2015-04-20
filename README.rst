@@ -11,12 +11,12 @@ Tested under...
 
 * Python
 
-    * 3.4
+  * 3.4
 
 * Django
 
-    * 1.7
-    * 1.8
+  * 1.7
+  * 1.8
 
 Installation
 ============

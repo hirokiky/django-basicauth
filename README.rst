@@ -31,9 +31,9 @@ Usage
 
 .. code-block:: python
 
-    from basicauth.decorators import basic_auth_decorator
+    from basicauth.decorators import basic_auth_required
 
-    @basic_auth_decorator
+    @basic_auth_required
     def myview(request):
         ...
 

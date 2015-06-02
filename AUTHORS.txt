@@ -1,0 +1,9 @@
+Author
+======
+
+* Hiroki Kiyohara (hirokiky@gmail.com)
+
+Bug reporting
+=============
+
+* Keith Solademi (ksolademi@gmail.com)

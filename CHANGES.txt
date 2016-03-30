@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.2 (2016-03-31)
+----------------
+
+* Added BasicAuthMiddleware https://github.com/hirokiky/django-basicauth/pull/3
+
 0.1 (2015-04-20)
 ----------------
 

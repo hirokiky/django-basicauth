@@ -7,7 +7,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 setup(
     name='django-basicauth',
-    version='0.1',
+    version='0.2',
     author='Hiroki KIYOHARA',
     author_email='hirokiky@gmail.com',
     url='https://github.com/hirokiky/django-basicauth/',

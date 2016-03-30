@@ -37,6 +37,15 @@ Usage
     def myview(request):
         ...
 
+or by a middleware.
+
+.. code-block:: python
+
+    MIDDLEWARE_CLASSES = (
+        'basicauth.middleware.BasicAuthMiddleware',
+        ...
+    )
+
 Settings
 ========
 

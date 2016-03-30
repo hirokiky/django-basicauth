@@ -1,26 +1,15 @@
 from functools import wraps
 
-from django.conf import settings
-
-from basicauth.basicauthutils import extract_basicauth
-from basicauth.response import HttpResponseUnauthorized
+from .response import HttpResponseUnauthorized
+from .basicauthutils import validate_request
 
 
 def basic_auth_required(func):
     @wraps(func)
     def _wrapped(request, *args, **kwargs):
-        if 'HTTP_AUTHORIZATION' not in request.META:
+        validated_username = validate_request(request)
+        if validated_username is None:
             return HttpResponseUnauthorized()
-
-        authorization_header = request.META['HTTP_AUTHORIZATION']
-        ret = extract_basicauth(authorization_header)
-        if not ret:
-            return HttpResponseUnauthorized()
-
-        username, password = ret
-
-        if settings.BASICAUTH_USERS.get(username) != password:
-            return HttpResponseUnauthorized()
-
-        return func(request, *args, **kwargs)
+        else:
+            return func(request, *args, **kwargs)
     return _wrapped

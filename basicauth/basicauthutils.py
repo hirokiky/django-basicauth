@@ -1,6 +1,9 @@
 import base64
 import binascii
+
 from urllib.parse import unquote_plus
+
+from django.conf import settings
 
 
 def extract_basicauth(authorization_header, encoding='utf-8'):
@@ -29,3 +32,26 @@ def extract_basicauth(authorization_header, encoding='utf-8'):
 
     username, password = map(unquote_plus, splitted)
     return username, password
+
+
+def validate_request(request):
+    """Check an incoming request.
+
+    Returns:
+        - None if authentication failed
+        - the validated username otherwise
+    """
+    if 'HTTP_AUTHORIZATION' not in request.META:
+        return None
+
+    authorization_header = request.META['HTTP_AUTHORIZATION']
+    ret = extract_basicauth(authorization_header)
+    if not ret:
+        return None
+
+    username, password = ret
+
+    if settings.BASICAUTH_USERS.get(username) != password:
+        return None
+
+    return username

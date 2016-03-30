@@ -8,4 +8,5 @@ class BasicAuthMiddleware:
         if validated_username is None:
             return HttpResponseUnauthorized()
         else:
+            request.META['REMOTE_USER'] = validated_username
             return None

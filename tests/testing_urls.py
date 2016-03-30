@@ -5,7 +5,8 @@ from basicauth.decorators import basic_auth_required
 
 
 def naked_view(request, *args, **kwargs):
-    return HttpResponse("Called")
+    username = request.META.get('REMOTE_USER')
+    return HttpResponse("Called; login=%s" % username)
 
 
 decorated_view = basic_auth_required(naked_view)

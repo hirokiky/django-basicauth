@@ -11,5 +11,6 @@ def basic_auth_required(func):
         if validated_username is None:
             return HttpResponseUnauthorized()
         else:
+            request.META['REMOTE_USER'] = validated_username
             return func(request, *args, **kwargs)
     return _wrapped

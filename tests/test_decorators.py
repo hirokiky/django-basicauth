@@ -9,7 +9,7 @@ class TestBasicAuthDecorator(TestCase):
 
     def test__it(self):
         res = self.client.get("/decorated/", HTTP_AUTHORIZATION="Basic dXNlcm5hbWU6cGFzc3dvcmQ=")
-        self.assertEqual(res.content, b"Called")
+        self.assertEqual(res.content, b"Called; login=username")
 
     def test__hasnt_authorization_header(self):
         res = self.client.get("/decorated/")

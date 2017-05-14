@@ -1,7 +1,7 @@
 import base64
 import binascii
 
-from urllib.parse import unquote_plus
+from six.moves.urllib.parse import unquote_plus
 
 from django.conf import settings
 

@@ -12,3 +12,4 @@
 .tox/
 dist/
 build/
+venv/

@@ -38,20 +38,25 @@ def validate_request(request):
     """Check an incoming request.
 
     Returns:
-        - None if authentication failed
-        - the validated username otherwise
+        - True if authentication passed
+        - Adding request['REMOTE_USER'] as authenticated username.
     """
+    if getattr(settings, 'BASICAUTH_DISABLE', False):
+        # Not to use this env
+        return True
+
     if 'HTTP_AUTHORIZATION' not in request.META:
-        return None
+        return False
 
     authorization_header = request.META['HTTP_AUTHORIZATION']
     ret = extract_basicauth(authorization_header)
     if not ret:
-        return None
+        return False
 
     username, password = ret
 
     if settings.BASICAUTH_USERS.get(username) != password:
-        return None
+        return False
 
-    return username
+    request.META['REMOTE_USER'] = username
+    return True

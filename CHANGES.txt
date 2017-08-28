@@ -1,6 +1,14 @@
 Changes
 =======
 
+0.3 (2017-08-28)
+----------------
+
+* Added ``BASICAUTH_DISABLE`` setting
+* Changed API of ``basicauthutils.validate_request``
+    * Fixed to return True/False
+    * Adding REMOTE_USER by this function
+
 0.2.1 (2017-08-28)
 ------------------
 

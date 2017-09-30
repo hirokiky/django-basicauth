@@ -31,4 +31,4 @@ class TestBasicAuthDecorator(TestCase):
             "/decorated/",
             HTTP_AUTHORIZATION="Basic aW52YWxpZDppbnZhbGlk"
         )
-        self.assertEqual(res.content, b"Called; login=")
+        self.assertEqual(res.content, b"Called; login=None")

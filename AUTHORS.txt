@@ -3,8 +3,14 @@ Author
 
 * Hiroki Kiyohara (hirokiky@gmail.com)
 * Raphaël Barrois (raphael.barrois@polytechnique.org)
+* Adam Venturella (aventurella@gmail.com)
 
 Bug reporting
 =============
 
 * Keith Solademi (ksolademi@gmail.com)
+
+Special Thanks
+==============
+
+* tshabs

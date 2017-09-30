@@ -1,6 +1,6 @@
 from .basicauthutils import validate_request
+from .compat import MiddlewareMixin
 from .response import HttpResponseUnauthorized
-from django.utils.deprecation import MiddlewareMixin
 
 
 class BasicAuthMiddleware(MiddlewareMixin):

@@ -11,6 +11,7 @@ Tested under...
 
 * Python
 
+  * 2.7
   * 3.6
 
 * Django

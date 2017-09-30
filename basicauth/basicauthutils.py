@@ -1,9 +1,9 @@
 import base64
 import binascii
 
-from urllib.parse import unquote_plus
-
 from django.conf import settings
+
+from .compat import unquote_plus
 
 
 def extract_basicauth(authorization_header, encoding='utf-8'):

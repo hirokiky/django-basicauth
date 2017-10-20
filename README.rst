@@ -62,7 +62,7 @@ Authenticated users can pass it without `Basic ...` header.
     from basicauth.decorators import basic_auth_required
 
     @basic_auth_required(
-        target_test=lambda request: not request.is_authenticated
+        target_test=lambda request: not request.user.is_authenticated
     )
     def myview(request):
         ...

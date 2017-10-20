@@ -11,8 +11,12 @@ def naked_view(request, *args, **kwargs):
 
 decorated_view = basic_auth_required(naked_view)
 
+decorated_target_view = basic_auth_required(
+    target_test=lambda request: request.GET.get('shouldauth'),
+)(naked_view)
 
 urlpatterns = [
-    url(r'^decorated/', decorated_view),
-    url(r'^naked/', naked_view),
+    url(r'^decorated/target_test/$', decorated_target_view),
+    url(r'^decorated/$', decorated_view),
+    url(r'^naked/$', naked_view),
 ]

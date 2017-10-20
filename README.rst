@@ -48,6 +48,28 @@ or by a middleware.
         ...
     )
 
+Basic Auth for specific requestno only
+--------------------------------------
+
+To apply basic auth for specific requests,
+Use ``target_test`` argument.
+
+In the below code, anonymous users will be required Basic Auth
+Authenticated users can pass it without `Basic ...` header.
+
+.. code-block:: python
+
+    from basicauth.decorators import basic_auth_required
+
+    @basic_auth_required(
+        target_test=lambda request: not request.is_authenticated
+    )
+    def myview(request):
+        ...
+
+``target_test`` accepts ``typing.Callable[[HttpRequest], bool]``,
+and if the callable returns ``True``, Basic Auth will be required.
+
 Settings
 ========
 

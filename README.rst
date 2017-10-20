@@ -70,6 +70,21 @@ Authenticated users can pass it without `Basic ...` header.
 ``target_test`` accepts ``typing.Callable[[HttpRequest], bool]``,
 and if the callable returns ``True``, Basic Auth will be required.
 
+Applying decorator to CBVs
+==========================
+
+To apply ``@basic_auth_requried`` decorator to Class Based Views,
+use ``django.utils.decorators.method_decorator``.
+
+.. code-block:: python
+
+    from django.utils.decorators import method_decorator
+    from basicauth.decorators import basic_auth_required
+
+    @method_decorator(basic_auth_required, name='dispatch')
+    class YourView(TemplateView):
+        template_name = "my-template.html"
+
 Settings
 ========
 

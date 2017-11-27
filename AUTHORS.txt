@@ -9,6 +9,7 @@ Bug reporting
 =============
 
 * Keith Solademi (ksolademi@gmail.com)
+* Hugo Castilho (hcastilho@gmail.com)
 
 Special Thanks
 ==============

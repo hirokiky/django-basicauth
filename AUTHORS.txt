@@ -4,6 +4,7 @@ Author
 * Hiroki Kiyohara (hirokiky@gmail.com)
 * Raphaël Barrois (raphael.barrois@polytechnique.org)
 * Adam Venturella (aventurella@gmail.com)
+* Tim Heap (hello@timheap.me)
 
 Bug reporting
 =============

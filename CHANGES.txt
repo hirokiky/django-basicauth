@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.5 (2018-05-09)
+---------------------
+* Added supporting Django2.0
+    * Thanks @timheap
+
 0.4.2 (2017-11-27)
 ------------------
 * Fixed to avoid timing attacks

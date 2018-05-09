@@ -1,12 +1,16 @@
-from django.conf import settings
+import django
 from django.test import TestCase
 from django.test.utils import override_settings
+
+if django.VERSION >= (1, 10):
+    middleware_settings = 'MIDDLEWARE'
+else:
+    middleware_settings = 'MIDDLEWARE_CLASSES'
 
 
 @override_settings(
     BASICAUTH_USERS={"username": "password"},
-    MIDDLEWARE_CLASSES=['basicauth.middleware.BasicAuthMiddleware'] +
-    list(settings.MIDDLEWARE_CLASSES),
+    **{middleware_settings: ['basicauth.middleware.BasicAuthMiddleware']}
 )
 class TestBasicAuthMiddleware(TestCase):
     def test__it(self):

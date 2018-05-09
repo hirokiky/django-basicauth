@@ -19,6 +19,7 @@ Tested under...
   * 1.8
   * 1.10
   * 1.11
+  * 2.0
 
 Installation
 ============
@@ -43,10 +44,12 @@ or by a middleware.
 
 .. code-block:: python
 
-    MIDDLEWARE_CLASSES = (
+    MIDDLEWARE = (
         'basicauth.middleware.BasicAuthMiddleware',
         ...
     )
+
+The name of ``MIDDLEWARE`` settings is ``MIDDLEWARE_CLASSES`` on Django 1.8.
 
 Basic Auth for specific requestno only
 --------------------------------------

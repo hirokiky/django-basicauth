@@ -1,6 +1,11 @@
 Changes
 =======
 
+0.5.1 (2018-08-06)
+--------------------------
+* Added supporting Django2.1
+    * Thanks @rhymes
+
 0.5 (2018-05-09)
 ---------------------
 * Added supporting Django2.0

@@ -76,7 +76,7 @@ and if the callable returns ``True``, Basic Auth will be required.
 Applying decorator to CBVs
 ==========================
 
-To apply ``@basic_auth_requried`` decorator to Class Based Views,
+To apply ``@basic_auth_required`` decorator to Class Based Views,
 use ``django.utils.decorators.method_decorator``.
 
 .. code-block:: python

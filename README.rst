@@ -19,7 +19,7 @@ Tested under...
 
   * 1.11
   * 2.1
-  * 2.2b
+  * 2.2
 
 Installation
 ============

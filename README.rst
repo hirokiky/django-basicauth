@@ -51,8 +51,8 @@ or by a middleware.
 
 The name of ``MIDDLEWARE`` settings is ``MIDDLEWARE_CLASSES`` on Django 1.8.
 
-Basic Auth for specific requestno only
---------------------------------------
+Basic Auth for specific requests only
+-------------------------------------
 
 To apply basic auth for specific requests,
 Use ``target_test`` argument.

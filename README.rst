@@ -11,15 +11,16 @@ Tested under...
 
 * Python
 
-  * 2.7
   * 3.6
   * 3.7
+  * 3.8
+  * 3.9
 
 * Django
 
-  * 1.11
-  * 2.1
   * 2.2
+  * 3.0
+  * 3.1
 
 Installation
 ============
@@ -49,7 +50,6 @@ or by a middleware.
         ...
     )
 
-The name of ``MIDDLEWARE`` settings is ``MIDDLEWARE_CLASSES`` on Django 1.8.
 
 Basic Auth for specific requests only
 -------------------------------------

@@ -5,6 +5,7 @@ Author
 * Raphaël Barrois (raphael.barrois@polytechnique.org)
 * Adam Venturella (aventurella@gmail.com)
 * Tim Heap (hello@timheap.me)
+* rhoboro
 
 Bug reporting
 =============

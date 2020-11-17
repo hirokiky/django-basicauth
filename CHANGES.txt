@@ -1,6 +1,12 @@
 Changes
 =======
 
+0.5.3 (2020-11-17)
+----------------------------
+* Added supporting Django3 and Python3.8,3.9
+    * Thanks @rhoboro !
+* Dropped Py2, Django1.11
+
 0.5.2 (2019-04-06)
 ----------------------------
 * Added supporting Django2.2

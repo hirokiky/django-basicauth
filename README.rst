@@ -73,6 +73,24 @@ Authenticated users can pass it without `Basic ...` header.
 ``target_test`` accepts ``typing.Callable[[HttpRequest], bool]``,
 and if the callable returns ``True``, Basic Auth will be required.
 
+Disable Basic Auth for specific requests
+-------------------------------------
+
+When using the middleware integration, you maybe wan't to exclude a single
+requests from requiring basic auth, e.g. for a healthcheck endpoint. In this
+case you can use the ``basic_auth_disabled`` decorator to disable basic auth for
+this view.
+
+.. code-block:: python
+
+    from basicauth.decorators import basic_auth_disabled
+
+    @basic_auth_disabled
+    def myview(request):
+        ...
+
+
+
 Applying decorator to CBVs
 ==========================
 
